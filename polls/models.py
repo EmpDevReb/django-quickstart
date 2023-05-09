@@ -9,8 +9,7 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
     def was__published_recently(self):
-        return self.pub_date >= timenow.now() -
-datetime.timedelta(days=1)
+        return self.pub_date >= timenow.now() - datetime.timedelta(days=1)
 
 
 class Choice(models.Model):
