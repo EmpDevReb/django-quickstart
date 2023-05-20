@@ -3,13 +3,13 @@ import datetime
 from django.db import models
 from django.utils import timezone
 
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+class Question(models.Model):                         #Important Line
+    question_text = models.CharField(max_length=200)  #Important Line
+    pub_date = models.DateTimeField('date published') #Important Line
     def __str__(self):
         return self.question_text
-    def was__published_recently(self):
-        return self.pub_date >= timenow.now() - datetime.timedelta(days=1)
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Choice(models.Model):
