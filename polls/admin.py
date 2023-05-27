@@ -1,10 +1,12 @@
 from django.contrib import admin
+# Added Choice and Question for .models import
 from .models import Choice, Question
 
+# Default numbers for Admin Choice pannel
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
-
+#Admin Question Code 
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields':['question_text']}),

@@ -28,8 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
+# Application definitions
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'django.contrib.admin',
@@ -51,7 +50,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
-
+#Modified TEMPLATES by adding [Base_DIR / 'templates']
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
